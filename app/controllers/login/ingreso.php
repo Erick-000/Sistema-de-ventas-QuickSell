@@ -20,6 +20,10 @@ foreach($usuarios as $usuario){
 
 if($contador == 0){
     echo "Datos de inicio de sesión incorrectos";
+    session_start();
+    $_SESSION['mensaje'] = "Datos de inicio de sesión incorrectos";
+    header('Location: '.$URL.'/login');
+
 }else{
     echo "Datos de incio de sesión correctos";
 
