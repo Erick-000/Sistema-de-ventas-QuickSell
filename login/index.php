@@ -24,12 +24,17 @@
     <!-- /.login-logo -->
 
     <?php
+    // Se inicia una sesión para acceder a la variables de sesión existentes 
     session_start();
+    // Se verifica si existe una variable de sesión llamada 'mensaje'
     if (isset($_SESSION['mensaje'])) {
+      
+      //Si la variable 'mensaje' existe se almacena en la variable 'respuesta'
       $respuesta = $_SESSION['mensaje']; ?>
       <script>
         Swal.fire({
           icon: "error",
+          //Se imprime la variable respuesta para mostrar el mensaje de la variable 'mensaje'
           title: "<?php echo $respuesta;?>",
         });
       </script>

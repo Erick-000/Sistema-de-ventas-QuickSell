@@ -1,7 +1,10 @@
 <?php
 
+// Se incluye el archivo de configuración donde se encuentran declaradas variables globales
 include('../app/config.php');
+// Se incluye el archivo de sesión donde se encuentran las variables de sesión existentes
 include('../layout/sesion.php');
+// Se incluye el archivo donde se encuentra contenido y los nav-bar del sitio
 include('../layout/parte1.php'); ?>
 
 
@@ -29,4 +32,5 @@ include('../layout/parte1.php'); ?>
 </div>
 <!-- /.content-wrapper -->
 
+<!-- // Se incluye el archivo donde se encuentra contenido y footer del sitio -->
 <?php include('../layout/parte2.php'); ?>
