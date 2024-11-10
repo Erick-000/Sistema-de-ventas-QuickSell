@@ -7,6 +7,8 @@ include('../layout/sesion.php');
 // Se incluye el archivo donde se encuentra contenido y los nav-bar del sitio
 include('../layout/parte1.php'); 
 
+include('../app/controllers/usuarios/show_usuario.php')
+
 ?>
 
 <!-- Content Wrapper. Contains page content -->
@@ -16,7 +18,7 @@ include('../layout/parte1.php');
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-12">
-          <h1 class="m-0">Registro de un nuevo usuario</h1>
+          <h1 class="m-0">Detalles del usuario</h1>
         </div><!-- /.col -->
       </div><!-- /.row -->
     </div><!-- /.container-fluid -->
@@ -31,7 +33,7 @@ include('../layout/parte1.php');
       <div class="col-md-12">
       <div class="card card-primary">
             <div class="card-header">
-              <h3 class="card-title">Creación de usuarios</h3>
+              <h3 class="card-title">Detalles</h3>
               <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
                 </button>
@@ -42,26 +44,16 @@ include('../layout/parte1.php');
             <div class="card-body">
               <div class="row">
                 <div class="col-md-12">
-                  <form action="../app/controllers/usuarios/create.php" method="post">
                     <div class="form-group">
                       <label for="">Nombres</label>
-                      <input type="text" name="nombres" class="form-control" placeholder="Nombre del usuario" required>
+                      <input type="text" name="nombres" class="form-control" value="<?php echo $nombres; ?>" disabled>
                     </div>
                     <div class="form-group">
                       <label for="">Email</label>
-                      <input type="email" name="email" class="form-control" placeholder="Email del usuario"required>
+                      <input type="email" name="email" value="<?php echo $email; ?>" class="form-control" disabled>
                     </div>
                     <div class="form-group">
-                      <label for="">Contraseña</label>
-                      <input type="password" name="password_user" class="form-control"required>
-                    </div>
-                    <div class="form-group">
-                      <label for="">Confirmar contraseña</label>
-                      <input type="password" name="password_repeat" class="form-control"required>
-                    </div>
-                    <div class="form-group">
-                      <a href="index.php" class="btn btn-secondary">Cancelar</a>
-                      <button type="submit" class="btn btn-primary">Guardar</button>
+                      <a href="index.php" class="btn btn-secondary">Volver</a>
                     </div>
                   </form>
                 </div>
@@ -79,3 +71,4 @@ include('../layout/parte1.php');
 
 <!-- // Se incluye el archivo donde se encuentra contenido y footer del sitio -->
 <?php include('../layout/parte2.php'); ?>
+<?php include('../layout/mensaje.php'); ?>
