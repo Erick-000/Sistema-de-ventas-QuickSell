@@ -20,3 +20,6 @@ try {
 
 // Definición de una URL base para la aplicación (puede ser usada para generar rutas o enlaces).
 $URL = "http://localhost/www.quicksell.com";
+
+date_default_timezone_set("America/Bogota");
+$fechaHora = date('Y-m-d H:i:s');

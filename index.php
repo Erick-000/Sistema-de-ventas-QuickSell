@@ -25,7 +25,9 @@ include('layout/parte1.php'); ?>
   <!-- Main content -->
   <div class="content">
     <div class="container-fluid">
-      Contenido del sistema
+
+    
+
     </div><!-- /.container-fluid -->
   </div>
   <!-- /.content -->

@@ -23,7 +23,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <body class="hold-transition sidebar-mini">
 
-  <!-- Script de laerta de Sweet Alert -->
+  <!-- Script de laerta de Sweet Alert 
+
   <script>
     Swal.fire({
       title: "Inicio de sesión exitoso",
@@ -31,6 +32,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       icon: "success"
     });
   </script>
+  -->
 
 
   <div class="wrapper">
