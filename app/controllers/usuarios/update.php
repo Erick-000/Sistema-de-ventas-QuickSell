@@ -9,6 +9,7 @@ $email = $_POST['email'];
 $password_user = $_POST['password_user'];
 $password_repeat = $_POST['password_repeat'];
 $id_usuario = $_POST['id_usuario'];
+$rol = $_POST['rol'];
 
 if ($password_user == "") {
     // Pregunta si las contraseñas son iguales
@@ -19,15 +20,17 @@ if ($password_user == "") {
 
         // Consulta sql donde se pasan los valores capturados por el post para insertarlos en la base de datos
         $sentencia = $pdo->prepare("UPDATE tb_usuarios 
-SET nombres = :nombres, 
-    email = :email, 
-    fyh_actualizacion = :fyh_actualizacion
-WHERE id_usuario = :id_usuario");
+       SET nombres = :nombres, 
+       email = :email, 
+       id_rol = :id_rol,
+       fyh_actualizacion = :fyh_actualizacion
+       WHERE id_usuario = :id_usuario");
 
 
         // Se envian los paramentros de las variables capturadas por el metodo post
         $sentencia->bindParam('nombres', $nombres);
         $sentencia->bindParam('email', $email);
+        $sentencia->bindParam('id_rol', $rol);
         $sentencia->bindParam('fyh_actualizacion', $fechaHora);
         $sentencia->bindParam('id_usuario', $id_usuario);
 
@@ -56,7 +59,8 @@ WHERE id_usuario = :id_usuario");
         // Consulta sql donde se pasan los valores capturados por el post para insertarlos en la base de datos
         $sentencia = $pdo->prepare("UPDATE tb_usuarios 
 SET nombres = :nombres, 
-    email = :email, 
+    email = :email,
+    id_rol = :id_rol, 
     password_user = :password_user,
     fyh_actualizacion = :fyh_actualizacion
 WHERE id_usuario = :id_usuario");
@@ -65,6 +69,7 @@ WHERE id_usuario = :id_usuario");
         // Se envian los paramentros de las variables capturadas por el metodo post
         $sentencia->bindParam('nombres', $nombres);
         $sentencia->bindParam('email', $email);
+        $sentencia->bindParam('id_rol', $rol);
         $sentencia->bindParam('password_user', $password_user);
         $sentencia->bindParam('fyh_actualizacion', $fechaHora);
         $sentencia->bindParam('id_usuario', $id_usuario);

@@ -53,6 +53,10 @@ include('../app/controllers/usuarios/show_usuario.php')
                       <input type="email" name="email" value="<?php echo $email; ?>" class="form-control" disabled>
                     </div>
                     <div class="form-group">
+                      <label for="">Rol del usuario</label>
+                      <input type="email" name="email" value="<?php echo $rol; ?>" class="form-control" disabled>
+                    </div>
+                    <div class="form-group">
                       <a href="index.php" class="btn btn-secondary">Volver</a>
                     </div>
                   </form>
