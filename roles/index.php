@@ -119,7 +119,7 @@ include('../app/controllers/roles/listado_de_roles.php');
         "emptyTable": "No hay información",
         "decimal": "",
         "info": "Mostrando _START_ a _END_ de _TOTAL_ Roles",
-        "infoEmpty": "Mostrando 0 a 0 de 0 Usuarios",
+        "infoEmpty": "Mostrando 0 a 0 de 0 Roles",
         "infoFiltered": "(Filtrado de _MAX_ total Roles)",
         "infoPostFix": "",
         "thousands": ",",
